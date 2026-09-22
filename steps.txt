@@ -1,0 +1,29 @@
+FastAPI project setup
+=====================
+
+1. Open PowerShell in this folder:
+   cd D:\python\fastAPI-endpoints
+
+2. Create a virtual environment:
+   py -m venv .venv
+
+3. Activate the virtual environment:
+   .\.venv\Scripts\Activate.ps1
+
+   If PowerShell blocks activation, run this once as your user:
+   Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+4. Install the dependencies:
+   python -m pip install --upgrade pip
+   pip install -r requirements.txt
+
+5. Start the development server:
+   uvicorn app.main:app --reload
+
+6. Open these URLs in a browser:
+   http://127.0.0.1:8000/
+   http://127.0.0.1:8000/health
+   http://127.0.0.1:8000/docs
+
+7. Run the tests in another PowerShell window after activating .venv:
+   python -m pytest
