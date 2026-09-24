@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 
 app = FastAPI(title="FastAPI Endpoints")
 
@@ -36,6 +36,6 @@ def userDetails(user_id: int):
     for data in user_db:
         data.id = user_id
         return data
-# raise htt
+raise HTTPException(status_code= 404, details="Kindly add the valid student")
 
 
