@@ -17,3 +17,6 @@ def getUser():
     return{
         "message": "Endpoint created successfuly"
     }
+
+# ractice Problem: User Retrieval API
+
