@@ -39,3 +39,20 @@ def user_details(user_id: int):
     raise HTTPException(status_code= 404, details="Kindly add the valid student")
 
 
+# Improve endpoints for the fast api
+@app.get("/users")
+def get_users() -> list[dict]:
+    return user_db
+
+
+@app.get("/users/{user_id}")
+def get_user(user_id: int) -> dict:
+    for user in user_db:
+        if user["id"] == user_id:
+            return user
+
+    raise HTTPException(
+        status_code=404,
+        detail="User not found"
+    )
+
