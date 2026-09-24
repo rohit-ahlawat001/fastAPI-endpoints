@@ -29,3 +29,13 @@ user_db =[
 def getUser():
     userData = user_db
     return userData
+
+@app.get("/user-details/{user_id}")
+def userDetails(user_id: int):
+    userData = user_db
+    for data in user_db:
+        data.id = user_id
+        return data
+# raise htt
+
+
