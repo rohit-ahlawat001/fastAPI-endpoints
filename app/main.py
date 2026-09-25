@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException,
 from pydantic import BaseModel
 
 app = FastAPI(title="FastAPI Endpoints")
@@ -57,7 +57,10 @@ def get_user(user_id: int) -> dict:
         detail="User not found"
     )
 
+class newStudent(BaseModel):
+    name: str
+    email: str
 
  # creating the post endpoint using the fastapi post endpoint 
- @app.post("/student_create")
-def studentCreate()
+@app.post("/student_create")
+def studentCreate(newStudent):
