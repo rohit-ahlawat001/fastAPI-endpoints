@@ -58,4 +58,6 @@ def get_user(user_id: int) -> dict:
     )
 
 
- # crea
+ # creating the post endpoint using the fastapi post endpoint 
+ @app.post("/student_create")
+def studentCreate()
