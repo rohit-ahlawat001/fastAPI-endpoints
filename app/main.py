@@ -69,3 +69,6 @@ def studentCreate(newStudent):
         "name": user.name,
         "email": user.email,
     }
+    user_db.append(new_user)
+    print(new_user)
+    return new_user
