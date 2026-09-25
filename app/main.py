@@ -64,3 +64,8 @@ class newStudent(BaseModel):
  # creating the post endpoint using the fastapi post endpoint 
 @app.post("/student_create")
 def studentCreate(newStudent):
+    new_user = {
+        "id": max(existing_user["id"] for existing_user in user_db) + 1,
+        "name": user.name,
+        "email": user.email,
+    }
