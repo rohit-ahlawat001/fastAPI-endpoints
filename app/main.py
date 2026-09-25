@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
 
 app = FastAPI(title="FastAPI Endpoints")
 
@@ -56,3 +57,5 @@ def get_user(user_id: int) -> dict:
         detail="User not found"
     )
 
+
+ # crea
