@@ -77,5 +77,7 @@ def studentCreate(newStudent):
     return new_user
 
 @app.delete("student_delete\{student_id}")
-def deleteStudent():
+def deleteStudent(student_id: int):
+    for student in user_db:
+
 
