@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
+
 app = FastAPI(title="FastAPI Endpoints")
 
 
@@ -60,6 +61,8 @@ def get_user(user_id: int) -> dict:
 class newStudent(BaseModel):
     name: str
     email: str
+    phone: int
+    # email: ema
 
  # creating the post endpoint using the fastapi post endpoint 
 @app.post("/student_create")
