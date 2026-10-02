@@ -82,5 +82,7 @@ def deleteStudent(student_id: int):
     
         if student["id"] == student_id:
             user_db.remove(student)
+            return {"message": "Student deleted successfully"}
+    raise HTTPException(status_code=404, detail="Student not found")
 
 
