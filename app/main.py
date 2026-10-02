@@ -79,5 +79,8 @@ def studentCreate(newStudent):
 @app.delete("student_delete\{student_id}")
 def deleteStudent(student_id: int):
     for student in user_db:
+    
+        if student["id"] == student_id:
+            user_db.remove(student)
 
 
