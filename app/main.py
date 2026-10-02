@@ -75,3 +75,7 @@ def studentCreate(newStudent):
     user_db.append(new_user)
     print(new_user)
     return new_user
+
+@app.delete("student_delete\{student_id}")
+def deleteStudent():
+
